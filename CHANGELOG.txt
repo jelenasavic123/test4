@@ -1,0 +1,94 @@
+Version 1.2.8 - (December 2020 Update)
+  1. "Night mode" has been changed to "Dark mode"
+  2. Improved "Dark mode"
+  3. Minor improvements.
+  4. Removed "Video Converter" and "Photo Viewer"
+  5. Updated Third-party Libraries.
+
+Version 1.2.5 - (May 2020 Update)
+  1. Added "Drag n Drop" support.
+  2. Updated Third-party Libraries.
+  3. Minor improvements.
+  4. Removed Turn "ON/OFF" Lights.
+  5. Added "Night" Mode.
+  6. Added "Confirmation Box" in Exit.
+
+Version 1.2.5 - (February 2020 Update)
+  1. Minor improvements.
+  2. Improved translation of some languages.
+  3. Added new languages "Maltese, Malay".
+  4. Upgraded bootstrap from "v4.3.1" to "v4.4.1"
+  5. Removed languages "Latin"
+
+Version 1.1.5 - (Anniversary Update)
+  1. Added new background.
+  2. Minor bug fixes.
+  3. Improved UI.
+  4. Added Turn "ON/OFF" Lights.
+  5. Added "Picture-in-Picture (PiP)" Mode.
+  6. Added back button in "Credits and Preferences".
+  7. Upgraded jQuery from "v3.3.1" to "v3.4.1".
+  8. Removed video converter.
+  9. Removed "Confirmation Box" in change language.
+  10. Added new languages "Latin, Urdu".
+
+Version 1.1.4
+  1. Upgraded bootstrap from "v4.2.1" to "v4.3.1"
+  2. Upgraded VideoJS from "v7.3.0" to "v7.4.1"
+  3. Minor bug fixes and improvements
+  4. Added "photo viewer"
+  5. Added "Confirmation Box" in change language
+
+Version 1.1.3
+  1. Minor bug fixes and improvements
+
+Version 1.1.2
+  1. Bug fixing
+  2. Changed open file dialog from "Open" to "Done"
+  3. Added video converter "online"
+
+Version 1.1.0
+  1. Bug fixing
+  2. Upgraded bootstrap from "v4.1.3" to "v4.2.1"
+  3. Upgraded videojs from "v7.1.0" to "v7.3.0"
+
+Version 1.0.9
+  1. Bug fixing
+  2. Improved UI
+  3. Added new languages "Bengali, Bulgarian, Persian"
+
+Version 1.0.8
+  1. Bug fixing
+  2. Improved UI
+
+Version 1.0.7
+  1. Bug fixing
+  2. Upgraded videojs from "v7.0.3" to "v7.1.0"
+  3. Improved UI
+
+Version 1.0.6
+  1. Bug fixing
+  2. Added new languages "Dutch, Hindi, Indonesian"
+
+Version 1.0.5
+  1. Bug fixing
+
+Version 1.0.4
+  1. Upgraded bootstrap from "v4.1.1" to "v4.1.3"
+  2. Bug fixing
+
+Version 1.0.3
+  1. Added new languages "Polish, Romanian, Vietnamese, Greek, Russian, Ukrainian, Thai, Korean, Chinese (simplified)"
+  2. Bug fixing
+
+Version 1.0.2
+  1. Added new languages "French, German, Japanese, Portuguese"
+  2. Added font awesome 4.7.0
+  3. Bug fixing
+
+Version 1.0.1
+  1. Added multilingual support "Arabic, English, Italian, Spanish, Turkish"
+  2. Bug fixing
+  
+Version 1.0.0
+  1. Initial Release

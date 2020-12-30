@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="FunArt Software">
+		<link rel="shortcut icon" href="assets/img/FMP_logo.png" type="image/x-icon" />
+		<title>Fox Media Player</title>
+		<link href="assets/style.css" rel="stylesheet" />
+		<link href="assets/dark.css" rel="stylesheet" />
+		<link href="assets/custom/bootstrap/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+
+		<!-- Modal_OpenFile -->
+		<div class="modal fade" id="OpenFile" tabindex="-1" role="dialog" aria-labelledby="OpenFile" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<!-- Modal-Header -->
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><div class="close-btn">&times;</div></span></button>
+						<h5 align="center">Open File</h5><hr>
+						<!-- ./Modal-Header -->
+
+						<!-- Modal-Body -->
+						<label for="file-upload" class="file-upload" onclick="ShowSnackBar()"><i class="fa fa-folder-open-o">&nbsp;</i>Choose File (Audio/Video)</label>
+						<input id="file-upload" type="file" accept="video/*, audio/*" class="choose-file" />
+						<div id="message" class="message"><i class="fa fa-info-circle">&nbsp;</i>Choose File</div>
+						<div id="snackbar">Opening file in process ...</div>
+						<!-- ./Modal-Body -->
+
+						<!-- Modal-Footer -->
+						<center>
+							<hr><button type="submit" class="fmp-button" data-dismiss="modal"><i class="fa fa-check">&nbsp;</i>Done</button>
+						</center>
+						<!-- ./Modal-Footer -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ./Modal_OpenFile -->
+
+		<!-- Modal_About -->
+		<div class="modal fade" id="About" tabindex="-1" role="dialog" aria-labelledby="About" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<!-- Modal-Header -->
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><div class="close-btn">&times;</div></span></button>
+						<h5 align="center">About</h5><hr>
+						<!-- ./Modal-Header -->
+
+						<!-- Modal-Body -->
+						<center>
+							Fox Media Player - December 2020 Update<br>Version 1.2.8 (FoxMediaPlayer-v1.2.8)<br><br>
+							<a class="fmp-button" data-toggle="modal" data-dismiss="modal" data-target="#Prefs" onclick="ShowBackBTN_id0()"><i class="fa fa-sliders">&nbsp;</i>Check for Updates</a>
+						</center>
+						<!-- ./Modal-Body -->
+
+						<!-- Modal-Footer -->
+						<center>
+							<hr>
+							<button type="button" class="fmp-button" onclick="CHANGELOG_BTN()">CHANGELOG</button>
+							<button type="button" class="fmp-button" onclick="ShowLicense()">License (GPLv3)</button>
+							<button type="button" class="fmp-button" data-toggle="modal" data-dismiss="modal" data-target="#Credits" onclick="ShowBackBTN_id2()">Credits</button>
+						</center>
+						<!-- ./Modal-Footer -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ./Modal_About -->
+
+		<!-- Modal_Credits -->
+		<div class="modal fade" id="Credits" tabindex="-1" role="dialog" aria-labelledby="Credits" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<!-- Modal-Header -->
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><div class="close-btn">&times;</div></span></button>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#About" id="FMP_BackBTN_id2" onclick="HideBackBTN_id2"><span aria-hidden="true"><div class="back-btn">&lt;</div></span></button>
+						<h5 align="center">Credits</h5><hr>
+						<!-- ./Modal-Header -->
+
+						<!-- Modal-Body -->
+						<p>Bootstrap 4.5.3 - Copyright &copy; 2020 The Bootstrap Authors - <a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a></p>
+						<p>Font Awesome 4.7.0 - Copyright &copy; 2020 Fonticons, Inc. - <a href="https://fontawesome.com/" target="_blank">https://fontawesome.com/</a></p>
+						<p>jQuery 3.5.1 - Copyright &copy; 2020 The jQuery Foundation. - <a href="https://jquery.com/" target="_blank">https://jquery.com/</a></p>
+						<p>Video.js 7.10.2 - Copyright &copy; 2020 Brightcove, Inc. - <a href="https://videojs.com/" target="_blank">https://videojs.com/</a></p>
+						<embed src="assets/license.txt" class="fmpborder" width="100%" ></embed>
+						<center><a href="http://www.w3.org/html/logo/" target="_blank"><img src="assets/img/html5-badge.png" width="229" height="64" alt="html5-badge.png" title="HTML5 Powered with CSS3 / Styling, Multimedia, Performance &amp; Integration, and Offline &amp; Storage"></a></center>
+						<!-- ./Modal-Body -->
+
+						<!-- Modal-Footer -->
+						<center><hr><p>Made with <i class="fa fa-heart red"></i> By <a href="https://sites.google.com/site/funartsoftware/" target="_blank">FunArt Software</a> in ALGERIA</p></center>
+						<!-- ./Modal-Footer -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ./Modal_Credits -->
+
+		<!-- Modal_Donate -->
+		<div class="modal fade" id="Donate" tabindex="-1" role="dialog" aria-labelledby="Donate" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<!-- Modal-Header -->
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><div class="close-btn">&times;</div></span></button>
+						<h5 align="center">Donate</h5><hr>
+						<!-- ./Modal-Header -->
+
+						<!-- Modal-Body -->
+						<center>
+							<div class="greyborder">
+								<p><i class="fa fa-bitcoin">&nbsp;</i>Cryptocurrency Donation</p><hr style="width:25% !important; ">
+								<p>Bitcoin (BTC) / Bitcoin Cash (BCH)</p>
+								<p>Ethereum (ETH) / Electroneum (ETN)</p>
+								<p>Stellar (XLM)</p>
+								<a href="https://sites.google.com/site/funartsoftware/donate" target="_blank" class="fmp-button">Make a Donation</a>
+							</div><br>
+
+							<div class="greyborder">
+								<p><i class="fa fa-paypal">&nbsp;</i>PayPal Donation</p><hr style="width:25% !important; ">
+								<!-- PayPal Donate -->
+								<form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="post">
+
+									<!-- Identify your business so that you can collect the payments. -->
+									<input type="hidden" name="business" value="funart.software@gmail.com">
+
+									<!-- Specify a Donate button. -->
+									<input type="hidden" name="cmd" value="_donations">
+
+									<!-- Specify details about the contribution -->
+									<input type="hidden" name="item_name" value="Fox Media Player">
+									<input type="hidden" name="item_number" value="Support Us">
+									<input type="hidden" name="currency_code" value="USD">
+
+									<!-- Display the payment button. -->
+									<button type="submit" class="fmp-button" name="submit">Donate</button>
+									<img alt="" width="1" height="1" src="assets/img/pixel.gif" >
+								</form>
+								<!-- ./PayPal Donate -->
+							</div>
+						</center>
+						<!-- ./Modal-Body -->
+
+						<!-- Modal-Footer -->
+						<center><hr><p data-toggle="modal" data-dismiss="modal" data-target="#Prefs" title="Hi there, click here ..." onclick="ShowBackBTN_id1()">You can help us by submitting a feedback, donating.</p></center>
+						<!-- ./Modal-Footer -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ./Modal_Donate -->
+
+		<!-- Modal_PhotoViewer -->
+		<div class="modal fade" id="PhotoViewer" tabindex="-1" role="dialog" aria-labelledby="PhotoViewer" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<!-- Modal-Header -->
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><div class="close-btn">&times;</div></span></button>
+						<h5 align="center">Fox Photo Viewer</h5><hr>
+						<!-- ./Modal-Header -->
+
+						<!-- Modal-Body -->
+						<embed src="assets/fox_photo_viewer/photo_viewer.html" class="_PhotoViewer" width="100%" height="500px"></embed><br>
+						<!-- ./Modal-Body -->
+
+						<!-- Modal-Footer -->
+							<center>
+								<hr><a href="https://sites.google.com/site/funartsoftware/fox-photo-viewer" target="_blank">Fox Photo Viewer</a>, © 2020 <a href="https://sites.google.com/site/funartsoftware/" target="_blank">FunArt Software</a>
+							</center>
+						<!-- ./Modal-Footer -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ./Modal_PhotoViewer -->
+
+		<!-- Modal_Preferencess -->
+		<div class="modal fade" id="Prefs" tabindex="-1" role="dialog" aria-labelledby="Prefs" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<!-- Modal-Header -->
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><div class="close-btn">&times;</div></span></button>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#About" id="FMP_BackBTN_id0" onclick="HideBackBTN_id0()"><span aria-hidden="true"><div class="back-btn">&lt;</div></span></button>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#Donate" id="FMP_BackBTN_id1" onclick="HideBackBTN_id1()"><span aria-hidden="true"><div class="back-btn">&lt;</div></span></button>
+						<h5 align="center">Preferences</h5><hr>
+						<!-- ./Modal-Header -->
+
+						<!-- Modal-Body -->
+						<center>
+							<div class="greyborder">
+								<p><i class="fa fa-language">&nbsp;</i>Change Language</p><hr style="width:25% !important; ">
+								<form name="mainform" enctype="application/x-www-form-urlencoded">
+									<select class="fmp-button" id="selectlang" name="languages" language="javascript" onChange="window.location=document.mainform.selectlang.options[document.mainform.selectlang.selectedIndex].value">
+										<option value="javascript:(0);" selected="true">Default (English)</option>
+										<option value="html/index.id.html">Bahasa Indonesia</option>
+										<option value="html/index.de.html">Deutsch</option>
+										<option value="html/index.es.html">Español</option>
+										<option value="html/index.fr.html">Français</option>
+										<option value="html/index.it.html">Italiano</option>
+										<option value="html/index.mt.html">Malti</option>
+										<option value="html/index.ms.html">Melayu</option>
+										<option value="html/index.nl.html">Nederlands</option>
+										<option value="html/index.pl.html">Polski</option>
+										<option value="html/index.pt.html">Português</option>
+										<option value="html/index.ro.html">Română</option>
+										<option value="html/index.vi.html">Tiếng việt</option>
+										<option value="html/index.tr.html">Türkçe</option>
+										<option value="html/index.el.html">Ελληνικά</option>
+										<option value="html/index.bg.html">Български</option>
+										<option value="html/index.ru.html">русский</option>
+										<option value="html/index.uk.html">українська</option>
+										<option value="html/index.ar.html">العربية</option>
+										<option value="html/index.fa.html">فارسی</option>
+										<option value="html/index.ur.html">اردو</option>
+										<option value="html/index.ko.html">한국어</option>
+										<option value="html/index.zh_cn.html">简体中文</option>
+										<option value="html/index.ja.html">日本語</option>
+										<option value="html/index.hi.html">हिन्दी</option>
+										<option value="html/index.bn.html">বাংলা</option>
+										<option value="html/index.th.html">ไทย</option>
+									</select>
+								</form>
+							</div><br>
+
+							<div class="greyborder">
+								<p><i class="fa fa-spinner fa-pulse fa-spin"></i>&nbsp;Check for Updates</p><hr style="width:25% !important; ">
+								<embed src="https://fox-media-player.netlify.app/fmp/1.2.8/updates.html" class="fmpborder" ></embed>
+							</div><br>
+
+							<div class="greyborder">
+								<p><i class="fa fa-sliders">&nbsp;</i>More Preferences ...</p><hr style="width:25% !important; ">
+								<a href="mailto:funart.software@gmail.com?subject=Feedback" class="fmp-button"><i class="fa fa-reply">&nbsp;</i>Feedback</a>
+								<a class="fmp-button" href="javascript:void(0);" onclick="replacejscssfile('style.css', 'dark.css', 'css')"><i class="fa fa-moon-o">&nbsp;</i>Dark mode</a>
+							</div>
+						</center>
+						<!-- ./Modal-Body -->
+
+						<!-- Modal-Footer -->
+						<!-- no-footer --><center><!-- no-footer --></center><!-- no-footer -->
+						<!-- ./Modal-Footer -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ./Modal_Preferences -->
+
+		<!-- ExitConfirmationBox -->
+		<div class="modal fade" id="ExitConfirmationBox" tabindex="-1" role="dialog" aria-labelledby="ExitConfirmationBox" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<!-- Modal-Header -->
+						<h5 align="center">Fox Media Player</h5><hr>
+						<!-- ./Modal-Header -->
+
+						<!-- Modal-Body -->
+						<div align="center">
+							<p>Are you sure you want to exit<br>Fox Media Player?</p>
+						</div>
+						<!-- ./Modal-Body -->
+
+						<!-- Modal-Footer -->
+						<div align="center"><hr>
+							<a href="javascript:window.close()" class="fmp-button btn-danger">Yes</a>
+							<a href="javascript:void(0)" class="fmp-button btn-success" data-dismiss="modal">No</a>
+						</div>
+						<!-- ./Modal-Footer -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ./ExitConfirmationBox -->
+
+		<!-- Main -->
+		<h1 align="center">Fox Media Player</h1>
+
+		<!-- ToolBar -->
+		<center>
+			<div class="toolbar">
+				<div class="dropdown">
+					<button class="fmp-button dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#OpenFile"><i class="fa fa-folder-open-o">&nbsp;</i>Open File</a>
+						<a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#ExitConfirmationBox"><i class="fa fa-times-circle">&nbsp;</i>Exit</a>
+					</div>
+				</div>
+			</div>
+			<div class="toolbar">
+				<div class="dropdown">
+					<button class="fmp-button dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#About"><i class="fa fa-info-circle">&nbsp;</i>About</a>
+						<a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#Donate"><i class="fa fa-money">&nbsp;</i>Donate</a>
+						<a class="dropdown-item" href="javascript:void(0);" onclick="rtpSourceForgeBTN()"><i class="fa fa-star">&nbsp;</i>Rate this Project</a>
+						<a class="dropdown-item" href="https://sites.google.com/site/funartsoftware/help-support" target="_blank"><i class="fa fa-question-circle">&nbsp;</i>Help & Support</a>
+					</div>
+				</div>
+			</div>
+			<div class="toolbar">
+				<button class="fmp-button" type="button" data-toggle="modal" data-target="#Prefs">Preferences</button>
+			</div>
+			<div class="toolbar">
+				<div class="dropdown">
+					<button class="fmp-button dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="https://sourceforge.net/p/fox-media-player/" target="_blank"><i class="fa fa-link">&nbsp;</i>SourceForge</a>
+						<a class="dropdown-item" href="https://twitter.com/FunArtSoftware" target="_blank"><i class="fa fa-twitter">&nbsp;</i>Twitter</a>
+					</div>
+				</div>
+			</div>
+		</center>
+		<!-- ./ToolBar -->
+		<br />
+		<!-- videojs_Player -->
+		<center>
+			<video id="my-video" class="video-js vjs-default-skin" controls="" preload="auto" width="996" height="560" poster="assets/img/poster.png" data-setup="{}">
+				<source src="assets/demo/mov_123.mp4" type='video/mp4'><!-- video_demo_file -->
+				<source src="assets/demo/aud_123.mp3" type='audio/mp3'><!-- audio_demo_file -->
+				<!-- <track label="English" kind="subtitles" srclang="en" src="assets/demo/sub123.vtt"> --><!-- subtitles -->
+				<p class="vjs-no-js">
+					To view this video please enable JavaScript, and consider upgrading to a web browser that
+					<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+				</p>
+			</video>
+		</center>
+		<!-- ./videojs_Player -->
+		<br />
+		<!-- ./Main -->
+	</body>
+	<footer class="footer">
+		<center>
+			<h4 class="copyright"><a href="https://sites.google.com/site/funartsoftware/" target="_blank">FunArt Software</a></h4>
+		</center>
+	</footer>
+	<script>
+		// CHANGELOG
+		function CHANGELOG_BTN() {
+			var myWindow = window.open("https://sites.google.com/site/funartsoftware/fox-media-player", "CHANGELOG | Fox Media Player");
+		}
+		// License
+		function ShowLicense() {
+			var myWindow = window.open("https://www.gnu.org/licenses/gpl-3.0.en.html", "License | Fox Media Player");
+		}
+		// FunArt Software SourceForge
+		function rtpSourceForgeBTN() {
+			var myWindow = window.open("https://sourceforge.net/projects/fox-media-player/reviews/new", "Rate this Project | Fox Media Player");
+		}
+	</script>
+	<script src="assets/custom/fmp_js-file.js" ></script>
+	<script src="assets/custom/jquery.min.js"></script>
+	<script src="assets/custom/videojs/video.min.js"></script>
+	<script src="assets/custom/bootstrap/bootstrap.bundle.min.js"></script>
+</html>
